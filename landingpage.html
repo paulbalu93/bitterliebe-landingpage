@@ -1,0 +1,891 @@
+<p> </p>
+<style>
+  <!--
+  <span id="mce_marker" data-mce-type="bookmark">&#xFEFF;&#x200B;</span><span id="__caret">_</span><!--
+  <span id="mce_marker" data-mce-type="bookmark">&#xFEFF;&#x200B;</span><span id="__caret">_</span><!--
+  #form-ccpa-edit-account-request,
+      #form-ccpa-data-account-request,
+      #form-ccpa-personal-data-report-request,
+      #form-ccpa-delete-account-request {
+          display: none;
+      }
+
+      #ccpa_page form .loading {
+          display: inline-block;
+          margin-left: 20px;
+          display: none;
+      }
+
+      #ccpa_page form .loading:not(:required):after {
+        content: '';
+        display: block;
+        font-size: 10px;
+        width: 1em;
+        height: 1em;
+        margin-top: -0.5em;
+        -webkit-animation: spinner 1500ms infinite linear;
+        -moz-animation: spinner 1500ms infinite linear;
+        -ms-animation: spinner 1500ms infinite linear;
+        -o-animation: spinner 1500ms infinite linear;
+        animation: spinner 1500ms infinite linear;
+        border-radius: 0.5em;
+        -webkit-box-shadow: rgba(120,129,136, 1) 1.5em 0 0 0, rgba(120,129,136, 1) 1.1em 1.1em 0 0, rgba(120,129,136, 1) 0 1.5em 0 0, rgba(120,129,136, 1) -1.1em 1.1em 0 0, rgba(120,129,136, 1) -1.5em 0 0 0, rgba(120,129,136, 1) -1.1em -1.1em 0 0, rgba(120,129,136, 1) 0 -1.5em 0 0, rgba(120,129,136, 1) 1.1em -1.1em 0 0;
+        box-shadow: rgba(120,129,136, 1) 1.5em 0 0 0, rgba(120,129,136, 1) 1.1em 1.1em 0 0, rgba(120,129,136, 1) 0 1.5em 0 0, rgba(120,129,136, 1) -1.1em 1.1em 0 0, rgba(120,129,136, 1) -1.5em 0 0 0, rgba(120,129,136, 1) -1.1em -1.1em 0 0, rgba(120,129,136, 1) 0 -1.5em 0 0, rgba(120,129,136, 1) 1.1em -1.1em 0 0;
+      }
+
+      /* Animation */
+
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @-o-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+  -->
+
+  /*! CSS Used from: Embedded */
+  .flickity-viewport.is-selected{
+  width: 100vw;
+  }
+
+  main *{font-family:"Lato", sans-serif;box-sizing:border-box;margin:0;}
+  h3{margin-top:0;margin-bottom:.5rem;font-weight:700;line-height:1.2;}
+  h3{font-size:calc(1.3rem + .6vw);}
+  @media (min-width:1200px){
+  h3{font-size:1.75rem;}
+  }
+  p{margin-top:0;margin-bottom:1rem;}
+  .product-fix{
+  top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+  }
+
+  .product-slider-content {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      width: calc(100vw/5 - 5*10px);
+      margin: 0 10px;
+      text-align: center;
+      border-radius: 14%;
+      height: calc(100vw/5 - 5*10px);
+      background-color: #e6e9a6;
+  }
+
+  .row{--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(-1 * var(--bs-gutter-y));margin-right:calc(-.5 * var(--bs-gutter-x));margin-left:calc(-.5 * var(--bs-gutter-x));}
+  .row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-top:var(--bs-gutter-y);}
+  @media (min-width:576px){
+  .col-sm-6{flex:0 0 auto;width:50%;}
+  }
+  @media (min-width:768px){
+  .col-md-3{flex:0 0 auto;width:25%;}
+  .col-md-6{flex:0 0 auto;width:50%;}
+  }
+  @media (min-width:992px){
+  .col-lg-3{flex:0 0 auto;width:25%;padding:20px;}
+  .col-lg-12{flex:0 0 auto;width:100%;}
+  }
+  .overflow-hidden{overflow:hidden!important;}
+  .w-100{width:100%!important;}
+  .my-3{margin-top:1rem!important;margin-bottom:1rem!important;}
+  .p-3{padding:1rem!important;}
+  .px-3{padding-right:1rem!important;padding-left:1rem!important;}
+  .py-3{padding-top:1rem!important;padding-bottom:1rem!important;}
+  .text-center{text-align:center!important;}
+  @media (min-width:768px){
+  .d-md-flex{display:flex!important;}
+  .my-md-3{margin-top:1rem!important;margin-bottom:1rem!important;}
+  .ps-md-3{padding-left:1rem!important;}
+  }
+
+  @media (min-width: 768px){
+  .flex-md-equal > *{flex:1;}
+  }
+  *{font-family:'Lato', sans-serif;}
+  .intro__landingpage{background:url("https://cdn.shopify.com/s/files/1/0314/2765/7868/files/intro_landingpage.jpg?v=1633624296") center center/cover;min-height:30vw;background-repeat:no-repeat;width:100%;}
+  .blank-box{background:palegreen;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:50%;margin:0 auto;min-height:300px;}
+  .vertical-middle{position:relative;}
+  @media (max-width: 768px){
+  .klaviyo-form-JgVxmr{display:none;}
+  .klaviyo-form-KeAFAJ{display:block;}
+  .mobile-fix{
+  height:400px;}
+  .usp__headline{font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+  .order-fix-1{order:1;}
+  .order-fix-2{order:2;}
+  }
+  @media (min-width: 768px){
+  .klaviyo-form-JgVxmr{display:block;}
+  .klaviyo-form-KeAFAJ{display:none;}
+  }
+  .usp__img{width:80%;}
+  .usp__headline{font-size:calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+
+
+  }
+  .heading-wrapper{display: none;}
+  -->
+</style>
+<div id="ccpa_page" class="col-sm-12">
+  <div class="intro__landingpage"></div>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="row">
+      <div class="col-md-6 px-3 text-center overflow-hidden vertical-middle">
+        <div class="my-3 py-3 mobile-fix">
+          <div
+            data-limoniapps-discountninja-product-handle="bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+            data-limoniapps-discountninja-product-collections="produkte,bitterliebe-tropfen"
+            data-limoniapps-discountninja-product-available="true"
+            data-limoniapps-discountninja-product-price="1495"
+            data-limoniapps-discountninja-product-compareatprice="0"
+            data-limoniapps-discountninja-product-pricevaries="false"
+            data-limoniapps-discountninja-product-pricemin="1495"
+            data-limoniapps-discountninja-product-tags="bitterbottleslider,sichtbar"
+            class="
+              product-fix
+              one-half
+              &lt;/number&gt;
+              medium-down--one-half
+              small-down--one-whole
+              column
+              has-thumbnail-sticker
+              thumbnail
+              product__thumbnail product__gridItem
+              thumbnail__hoverOverlay--false
+              has-padding-bottom
+            "
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/Product"
+          >
+            <div
+              class="product-link-anchor"
+              data-url="/collections/produkte/products/bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+            >
+              <div class="product-image__wrapper">
+                <div class="image__container product__imageContainer">
+                  <a
+                    class="product-link-anchor"
+                    href="/collections/produkte/products/bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+                  >
+                    <div class="image-element__wrap" style="max-width: 1024px">
+                      <img
+                        alt="BitterLiebe 50ml – Leckere Bitterstoffe Tropfen"
+                        loading="lazy"
+                        src="//cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_1600x.jpg?v=1625500480"
+                        srcset="
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_5000x.jpg?v=1625500480 5000w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_4500x.jpg?v=1625500480 4500w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_4000x.jpg?v=1625500480 4000w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_3500x.jpg?v=1625500480 3500w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_3000x.jpg?v=1625500480 3000w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_2500x.jpg?v=1625500480 2500w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_2000x.jpg?v=1625500480 2000w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_1800x.jpg?v=1625500480 1800w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_1600x.jpg?v=1625500480 1600w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_1400x.jpg?v=1625500480 1400w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_1200x.jpg?v=1625500480 1200w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_1000x.jpg?v=1625500480 1000w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_800x.jpg?v=1625500480   800w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_600x.jpg?v=1625500480   600w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_400x.jpg?v=1625500480   400w,
+                          //cdn.shopify.com/s/files/1/0248/6583/3023/products/210420-Tropfen-gruen-good-food-Website_200x.jpg?v=1625500480   200w
+                        "
+                        height="1024"
+                        width="1024"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="thumbnail__caption text-align-center">
+                <div class="product-thumbnail bbb">
+                  <a
+                    href="/collections/produkte/products/bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+                    class="product-thumbnail__title product-link-anchor"
+                    >BitterLiebe 50ml – Leckere Bitterstoffe Tropfen</a
+                  >
+                  <span
+                    class="
+                      limoniapps-discountninja-productprice
+                      limoniapps-discountninja-align-center
+                      product-thumbnail__price
+                      price
+                    "
+                  >
+                    <span class="money">14,95 €</span>
+                    <span class="price__unit"
+                      ><span class="price-unit-price"
+                        >( <span data-unit-price="" class="money">29,90 €</span
+                        ><span class="visually-hidden"> / </span
+                        ><span data-unit-price-base-unit="">100ml </span>)
+                      </span>
+                    </span></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div style="clear: both"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 px-3 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">Entdecke die Kraft der Bitterstoffe</h3>
+          <p class="lead">
+            Neben den allgemein bekannten Geschmacksrichtungen süß, salzig,
+            sauer und umami (fleischig) haben viele die fünfte vergessen:
+            bitter. Für eine ausgewogene Ernährung jedoch sind Bitterstoffe eine
+            sinnvolle Ergänzung und der bittere Geschmack hat seinen Sinn für
+            unseren Körper. Bereits Hildegard von Bingen sprach Bitterstoffen
+            eine wichtige Funktion zu. Die Universalgelehrte wird als diejenige
+            angesehen, die unter anderem den Grundstein für die menschliche
+            Nutzung von bitteren Pflanzen und Kräutern in der Ernährung gelegt
+            hat.
+          </p>
+        </div>
+      </div>
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="row">
+          <div class="col-md-6 px-3 text-center overflow-hidden order-fix-2">
+            <div class="my-3 py-3">
+              <h3 class="display-5">
+                Bitterstoffe fehlen oft im heutigen Gemüse
+              </h3>
+              <p class="lead">
+                Früher waren bittere Substanzen zu einem weitaus größeren Teil
+                in unserer Ernährung enthalten. Bitteres Gemüse wie Radicchio
+                oder Chicoree war auf dem Speiseplan, auch Bitterorangen oder
+                Artischocken. Heutzutage essen wir nicht nur weniger Gemüse,
+                welches viele Bitterstoffe enthält, das Gemüse ist auch weniger
+                bitter. Das liegt daran, dass die Bitterstoffe aus unseren
+                Pflanzen herausgezüchtet wurden. Somit ist ein Kreislauf
+                entstanden, wir nehmen deutlich weniger Bitterstoffe zu uns und
+                gleichzeitig haben wir uns den Geschmack von bitter abgewöhnt.
+                Bittere Lebensmittel fehlen also in unserer Ernährung zunehmend.
+                Daher sind Bittertropfen und Bitterkonzentrate umso hilfreicher,
+                um dem Körper Bitterstoffe zuzuführen und sich wieder an den
+                Geschmack von bitter zu gewöhnen.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 px-3 text-center overflow-hidden vertical-middle"
+          >
+            <div class="my-3 p-3 mobile-fix order-fix-1">
+              <div
+                data-limoniapps-discountninja-product-handle="bitterliebe-kapseln"
+                data-limoniapps-discountninja-product-collections="7-mwst,bitterliebe-kapseln,produkte"
+                data-limoniapps-discountninja-product-available="true"
+                data-limoniapps-discountninja-product-price="1495"
+                data-limoniapps-discountninja-product-compareatprice="0"
+                data-limoniapps-discountninja-product-pricevaries="false"
+                data-limoniapps-discountninja-product-pricemin="1495"
+                data-limoniapps-discountninja-product-tags="sichtbar"
+                class="
+                  product-fix
+                  one-half
+                  &lt;/number&gt;
+                  medium-down--one-half
+                  small-down--one-whole
+                  column
+                  has-thumbnail-sticker
+                  thumbnail
+                  product__thumbnail product__gridItem
+                  thumbnail__hoverOverlay--false
+                  has-padding-bottom
+                "
+                itemprop="itemListElement"
+                itemscope=""
+                itemtype="http://schema.org/Product"
+              >
+                <div
+                  class="product-link-anchor"
+                  data-url="/collections/produkte/products/bitterliebe-kapseln"
+                >
+                  <div class="product-image__wrapper">
+                    <div class="image__container product__imageContainer">
+                      <a
+                        class="product-link-anchor"
+                        href="/collections/produkte/products/bitterliebe-kapseln"
+                      >
+                        <div
+                          class="image-element__wrap"
+                          style="max-width: 1024px"
+                        >
+                          <img
+                            alt="BitterLiebe Kapseln - Monatspackung (90 Stk.)"
+                            loading="lazy"
+                            src="//cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_1600x.jpg?v=1624376734"
+                            srcset="
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_5000x.jpg?v=1624376734 5000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_4500x.jpg?v=1624376734 4500w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_4000x.jpg?v=1624376734 4000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_3500x.jpg?v=1624376734 3500w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_3000x.jpg?v=1624376734 3000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_2500x.jpg?v=1624376734 2500w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_2000x.jpg?v=1624376734 2000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_1800x.jpg?v=1624376734 1800w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_1600x.jpg?v=1624376734 1600w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_1400x.jpg?v=1624376734 1400w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_1200x.jpg?v=1624376734 1200w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_1000x.jpg?v=1624376734 1000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_800x.jpg?v=1624376734   800w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_600x.jpg?v=1624376734   600w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_400x.jpg?v=1624376734   400w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-kapseln-gruenton-website-Website_200x.jpg?v=1624376734   200w
+                            "
+                            height="1024"
+                            width="1024"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="thumbnail__caption text-align-center">
+                    <div class="product-thumbnail bbb">
+                      <a
+                        href="/collections/produkte/products/bitterliebe-kapseln"
+                        class="product-thumbnail__title product-link-anchor"
+                        >BitterLiebe Kapseln - Monatspackung (90 Stk.)</a
+                      >
+                      <span
+                        class="
+                          limoniapps-discountninja-productprice
+                          limoniapps-discountninja-align-center
+                          product-thumbnail__price
+                          price
+                        "
+                      >
+                        <span class="money">14,95 €</span>
+                        <span class="price__unit"
+                          ><span class="price-unit-price"
+                            >(
+                            <span data-unit-price="" class="money">28,21 €</span
+                            ><span class="visually-hidden"> / </span
+                            ><span data-unit-price-base-unit="">100g </span>)
+                          </span>
+                        </span></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="row">
+          <div
+            class="col-md-6 px-3 text-center overflow-hidden vertical-middle"
+          >
+            <div class="my-3 py-3 mobile-fix">
+              <div
+                data-limoniapps-discountninja-product-handle="bitterliebe-pulver"
+                data-limoniapps-discountninja-product-collections="7-mwst,produkte,bitterliebe-pulver"
+                data-limoniapps-discountninja-product-available="true"
+                data-limoniapps-discountninja-product-price="1495"
+                data-limoniapps-discountninja-product-compareatprice="0"
+                data-limoniapps-discountninja-product-pricevaries="false"
+                data-limoniapps-discountninja-product-pricemin="1495"
+                data-limoniapps-discountninja-product-tags="bitterbottleslider,sichtbar"
+                class="
+                  product-fix
+                  one-half
+                  &lt;/number&gt;
+                  medium-down--one-half
+                  small-down--one-whole
+                  column
+                  has-thumbnail-sticker
+                  thumbnail
+                  product__thumbnail product__gridItem
+                  thumbnail__hoverOverlay--false
+                  has-padding-bottom
+                "
+                itemprop="itemListElement"
+                itemscope=""
+                itemtype="http://schema.org/Product"
+              >
+                <div
+                  class="product-link-anchor"
+                  data-url="/collections/produkte/products/bitterliebe-pulver"
+                >
+                  <div class="product-image__wrapper">
+                    <div class="image__container product__imageContainer">
+                      <a
+                        class="product-link-anchor"
+                        href="/collections/produkte/products/bitterliebe-pulver"
+                      >
+                        <div
+                          class="image-element__wrap"
+                          style="max-width: 1024px"
+                        >
+                          <img
+                            alt="BitterLiebe Pulver"
+                            loading="lazy"
+                            src="//cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_1600x.jpg?v=1623847437"
+                            srcset="
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_5000x.jpg?v=1623847437 5000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_4500x.jpg?v=1623847437 4500w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_4000x.jpg?v=1623847437 4000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_3500x.jpg?v=1623847437 3500w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_3000x.jpg?v=1623847437 3000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_2500x.jpg?v=1623847437 2500w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_2000x.jpg?v=1623847437 2000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_1800x.jpg?v=1623847437 1800w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_1600x.jpg?v=1623847437 1600w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_1400x.jpg?v=1623847437 1400w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_1200x.jpg?v=1623847437 1200w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_1000x.jpg?v=1623847437 1000w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_800x.jpg?v=1623847437   800w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_600x.jpg?v=1623847437   600w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_400x.jpg?v=1623847437   400w,
+                              //cdn.shopify.com/s/files/1/0248/6583/3023/products/210301-pulver-gruenton-website-Website_200x.jpg?v=1623847437   200w
+                            "
+                            height="1024"
+                            width="1024"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="thumbnail__caption text-align-center">
+                    <div class="product-thumbnail bbb">
+                      <a
+                        href="/collections/produkte/products/bitterliebe-pulver"
+                        class="product-thumbnail__title product-link-anchor"
+                        >BitterLiebe Pulver</a
+                      >
+                      <span
+                        class="
+                          limoniapps-discountninja-productprice
+                          limoniapps-discountninja-align-center
+                          product-thumbnail__price
+                          price
+                        "
+                      >
+                        <span class="money">14,95 €</span>
+                        <span class="price__unit"
+                          ><span class="price-unit-price"
+                            >(
+                            <span data-unit-price="" class="money">14,95 €</span
+                            ><span class="visually-hidden"> / </span
+                            ><span data-unit-price-base-unit="">100g </span>)
+                          </span>
+                        </span></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 px-3 text-center overflow-hidden">
+            <div class="my-3 p-3">
+              <h3 class="display-5">Wie kann man Bitterstoffe einnehmen?</h3>
+              <p class="lead">
+                Eine ausgewogene Ernährung ist immer zu empfehlen und in dieser
+                sollten auch bitterstoffhaltige Gemüse und Kräuter vorkommen.
+                Zusätzlich empfehlen wir BitterLiebe Bittertropfen,
+                Bitterkapseln, Bittertee oder Bitterpulver. Alle
+                Bitterstoff-Produkte von BitterLiebe sind vegan, glutenfrei,
+                zuckerfrei und ohne künstliche Zusatzstoffe. Die Bittertropfen
+                können drei mal täglich nach dem Essen und bei Bedarf
+                eingenommen werden. Die BitterLiebe Bitterkapseln stellen die
+                perfekte Ergänzung zu den Tropfen dar. Mit ausreichend Wasser
+                kann jeweils eine Kapsel vor dem Essen eingenommen werden. Das
+                Pulver von BitterLiebe eignet sich hervorragend zum Kochen und
+                für Smoothies oder Salatsoßen. Unser Bitterstoffe-Tee kann nicht
+                nur warm genossen werden, sondern auch als leckerer bitter
+                frischer Eistee getrunken werden.
+              </p>
+              <p class="lead">
+                Unsere Bittertopfen eignen sich auch bestens für Naschkatzen.
+                Wenn das Verlangen nach Süßem groß ist, empfehlen wir die
+                natürlichen Bitterstofftropfen ebenso, wie nach schwerem oder
+                fettigem Essen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <img
+              class="usp__img"
+              src="//cdn.shopify.com/s/files/1/0314/2765/7868/t/4/assets/200513_suesshungeraustricksen.svg?v=1633674127"
+            />
+            <p class="usp__headline">FÜR NASCHKATZEN</p>
+            <p>
+              Du bist eine Naschkatze? Dann empfehlen wir Dir unsere leckeren
+              Bitterstoffe Tropfen.
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <img
+              class="usp__img"
+              src="//cdn.shopify.com/s/files/1/0314/2765/7868/t/4/assets/200513_einfachedosierung.svg?v=1633674025"
+            />
+            <p class="usp__headline">PERFEKT NACH DEM ESSEN</p>
+            <p>
+              Manche schwören auf Schnaps und Espresso. Wir empfehlen die in
+              Vergessenheit geratenen Bitterstoffe.
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <img
+              class="usp__img"
+              src="//cdn.shopify.com/s/files/1/0314/2765/7868/t/4/assets/200513_wohlfuehlen.svg?v=1633674136"
+            />
+            <p class="usp__headline">SO LECKER SCHMECKT BITTER</p>
+            <p>
+              Bitter kann so lecker sein! Entdecke mit unserem Superfood Pulver
+              den einzigartigen Geschmackssinn bitter in Dir.
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <img
+              class="usp__img"
+              src="//cdn.shopify.com/s/files/1/0314/2765/7868/t/4/assets/200513_qualitaetskontrollen.svg?v=1633674114"
+            />
+            <p class="usp__headline">ZUFRIEDENE KUNDEN</p>
+            <p>
+              „Dank der BitterLiebe-Tropfen geht es mir rund um gut. Ich fühle
+              mich nach dem Essen damit einfach besser.“
+            </p>
+          </div>
+        </div>
+        <!-- /.row -->
+        <div id="shopify-section-magazin-carousel" class="shopify-section blog">
+          <div class="product-slider-wrapper">
+            <div
+              class="carousel flickity-enabled is-draggable"
+              data-flickity='{ "wrapAround": true }'
+              style="width: 100%; margin: auto"
+              tabindex="0"
+            >
+              <div
+                class="flickity-viewport"
+                style="height: 257.2px; touch-action: pan-y"
+              >
+                <div
+                  class="flickity-slider"
+                  style="left: 0px; transform: translateX(40.88%)"
+                >
+                  <div
+                    class="product-slider-content is-selected"
+                    style="position: absolute; left: 0%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-tropfen-mild-50ml"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/210104-Mild-Website.png?v=1619442128"
+                        alt="Tropfen mild"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-tropfen-mild-50ml"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-tropfen-mild-50ml"
+                      >Tropfen mild</a
+                    >
+                  </div>
+                  <div
+                    class="product-slider-content"
+                    aria-hidden="true"
+                    style="position: absolute; left: 18.25%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-kapseln"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/200908-Kapseln.png?v=1619442127"
+                        alt="Kapseln"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-kapseln"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-kapseln"
+                      >Kapseln</a
+                    >
+                  </div>
+                  <div
+                    class="product-slider-content"
+                    aria-hidden="true"
+                    style="position: absolute; left: 36.49%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/leckerer-kraeutertee"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/200908-Tee.png?v=1619442127"
+                        alt="Tee"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/leckerer-kraeutertee"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/leckerer-kraeutertee"
+                      >Tee</a
+                    >
+                  </div>
+                  <div
+                    class="product-slider-content"
+                    aria-hidden="true"
+                    style="position: absolute; left: 54.74%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-pulver"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/200908-Pulver.png?v=1619442127"
+                        alt="Pulver"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-pulver"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-pulver"
+                      >Pulver</a
+                    >
+                  </div>
+                  <div
+                    class="product-slider-content"
+                    aria-hidden="true"
+                    style="position: absolute; left: -54.74%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/201008-Tropfen.png?v=1619442127"
+                        alt="Tropfen"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-50ml-leckere-bitterstoffe-tropfen"
+                      >Tropfen</a
+                    >
+                  </div>
+                  <div
+                    class="product-slider-content"
+                    aria-hidden="true"
+                    style="position: absolute; left: -36.49%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-vitamin-c-kapseln-90-stk"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/200914_freisteller_vitaminckapsel.png?v=1619442127"
+                        alt="Vitamin C Kapseln"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-vitamin-c-kapseln-90-stk"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/bitterliebe-vitamin-c-kapseln-90-stk"
+                      >Vitamin C Kapseln</a
+                    >
+                  </div>
+                  <div
+                    class="product-slider-content"
+                    aria-hidden="true"
+                    style="position: absolute; left: -18.25%"
+                  >
+                    <h3 class="bl-font product-slider-title show--mobile">
+                      Unsere Produkte
+                    </h3>
+                    <a
+                      class="product-slider-content__image"
+                      href="https://bitterliebe.com/collections/produkte/products/lowen-deal"
+                      ><img
+                        loading="lazy"
+                        src="https://cdn.shopify.com/s/files/1/0248/6583/3023/files/201019-Loewen-Deal.png?v=1619442127"
+                        alt="Löwen-Deal"
+                      /> </a
+                    ><a
+                      class="blog-primary-btn show--mobile btn--moveUP bl-font"
+                      href="https://bitterliebe.com/collections/produkte/products/lowen-deal"
+                      >Zum Produkt</a
+                    >
+                    <a
+                      class="bl-font product-slider-title show--desktop"
+                      href="https://bitterliebe.com/collections/produkte/products/lowen-deal"
+                      >Löwen-Deal</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <button
+                class="flickity-button flickity-prev-next-button previous"
+                type="button"
+                aria-label="Previous"
+              >
+                <svg class="flickity-button-icon" viewbox="0 0 100 100">
+                  <path
+                    d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                    class="arrow"
+                  ></path>
+                </svg></button
+              ><button
+                class="flickity-button flickity-prev-next-button next"
+                type="button"
+                aria-label="Next"
+              >
+                <svg class="flickity-button-icon" viewbox="0 0 100 100">
+                  <path
+                    d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                    class="arrow"
+                    transform="translate(100, 100) rotate(180) "
+                  ></path>
+                </svg>
+              </button>
+              <ol class="flickity-page-dots">
+                <li
+                  class="dot is-selected"
+                  aria-label="Page dot 1"
+                  aria-current="step"
+                ></li>
+                <li class="dot" aria-label="Page dot 2"></li>
+                <li class="dot" aria-label="Page dot 3"></li>
+                <li class="dot" aria-label="Page dot 4"></li>
+                <li class="dot" aria-label="Page dot 5"></li>
+                <li class="dot" aria-label="Page dot 6"></li>
+                <li class="dot" aria-label="Page dot 7"></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
