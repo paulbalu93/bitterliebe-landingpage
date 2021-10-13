@@ -1,3 +1,47 @@
 .banner {
   margin-top: 20px;
+  position: relative;
+  background: url("assets/intro_landingpage (1).jpeg");
+  min-height: 30vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.btn {
+  background-color: #9fc124;
+  border: none;
+}
+
+.img-description h6 {
+  color: #9fc124;
+}
+a {
+  text-decoration: none;
+}
+.price {
+}
+
+/* .btn-container {
+  position: absolute;
+  bottom: -20px;
+  left: 160px;
+}
+
+@media (max-width: 575px) {
+  .btn-container {
+    position: absolute;
+    bottom: -16px;
+    left: 150px;
+  }
+} */
+
+/* @media (max-width: 575px) {
+  .single-product-container {
+    margin-left: 2px;
+  }
+}
+@media (max-width: 575px) {
+  .single-product-container {
+    padding: 5;
+  }
+}  */
